@@ -83,7 +83,7 @@ void inicio(){
 		}		
 	cout<<endl;
 	for(int i=0; i<41;i++){if((i==0)||(i==1)){cout<<" ";}else{ if((i==2)||(i==40)){cout<<"|";}else{cout<<"-";}}}
-	cout<<endl<<"  |      ·Los controles son:            |";
+	cout<<endl<<"  |      Â·Los controles son:            |";
 	cout<<endl<<"  |        -W o flecha: Arriba          |";
 	cout<<endl<<"  |        -A o flecha: Izquierda       |";
 	cout<<endl<<"  |        -S o flecha: Abajo           |";
@@ -92,7 +92,7 @@ void inicio(){
 	cout<<endl<<"  |        -P: Pausa                    |";
 	cout<<endl;
 	for(int i=0; i<41;i++){if((i==0)||(i==1)){cout<<" ";}else{ if((i==2)||(i==40)){cout<<"|";}else{cout<<"-";}}}
-	cout<<endl<<"  | ·PULSA CUALQUIER TECLA PARA EMPEZAR |"<<endl;
+	cout<<endl<<"  | Â·PULSA CUALQUIER TECLA PARA EMPEZAR |"<<endl;
 	for(int i=0; i<41;i++){if((i==0)||(i==1)){cout<<" ";}else{ if((i==2)||(i==40)){cout<<"#";}else{cout<<"=";}}}
 	cout<<endl<<"   (Para salir, pulse 1)"<<endl;
 	switch(getch()){
@@ -241,7 +241,7 @@ void lose(){
 			reset();
 			break;
 		default:
-			cout<<"Tecla NO válida.";
+			cout<<"Tecla NO vÃ¡lida.";
 			break;
 	}
 	system("cls");
@@ -256,49 +256,33 @@ void input (){
 	if (opk == DERECHA){ opk = 'd';}
 		switch(opk){ //muevo la serpiente excepto si va en la direccion opuesta (donde esta la cola)
 			case 'a':
-				if(snakeDirec!=r)
-					snakeDirec = l;
-				break;
 			case 'A':
 				if(snakeDirec!=r)
 					snakeDirec = l;
 				break;
 			case 's':
+			case 'S':
 				if(snakeDirec!=u)
 					snakeDirec = d; 
 				break;
-			case 'S':
-				if(snakeDirec!=u)
-					snakeDirec = d;
-				break;
+			case 'D':
 			case 'd':
 				if(snakeDirec!=l)
 					snakeDirec = r;
 				break;
-			case 'D':
-				if(snakeDirec!=l)
-					snakeDirec = r;
-				break;
+			case 'W':
 			case 'w':
 				if(snakeDirec!=d)
 					snakeDirec = u;
 				break;
-			case 'W':
-				if(snakeDirec!=d)
-					snakeDirec = u;
-				break;
+			case 'Q':
 			case 'q':
 				fin = true;
 				break;
-			case 'Q':
-				fin = true;
-				break;
+			case 'P':
 			case 'p':
 				snakeDirec = st;
-				break;
-			case 'P':
-				snakeDirec = st;
-				break;
+				break
 		} 
 	}
 }
